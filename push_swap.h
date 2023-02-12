@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:16:27 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/10 21:49:25 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/12 07:47:49 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,16 +51,16 @@ void	check_double(t_list *head);
 t_list	*ft_fill(char **av, int ac);
 /*------------------------------------*/
 //INSTRUCTIONS
-void	pa(t_list *head_a, t_list *head_b);
-void	pb(t_list *head_b, t_list *head_a);
+void	pa(t_list **head_a, t_list **head_b);
+void	pb(t_list **head_b, t_list **head_a);
 void	sa(t_list *head_a);
 void	sb(t_list *head_b);
 void	ss(t_list *head_a, t_list *head_b);
-void	ra(t_list *head_a);
-void	rb(t_list *head_b);
-void	rr(t_list *head_a, t_list *head_b);
-void	rra(t_list *head_a);
-void	rrb(t_list *head_b);
-void	rrr(t_list *head_a, t_list *head_b);
+void	ra(t_list **head_a);
+void	rb(t_list **head_b);
+void	rr(t_list **head_a, t_list **head_b);
+void	rra(t_list **head_a);
+void	rrb(t_list **head_b);
+void	rrr(t_list **head_a, t_list **head_b);
 /*------------------------------------*/
 #endif
