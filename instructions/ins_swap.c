@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:27:12 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/09 15:57:09 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/12 14:06:44 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 void	swap(t_list *head)
 {
+	int		i;
 	t_list	*node;
 	int		tmp;
 
+	i = ft_lstsize(head);
+	if (i <= 1)
+		return ;
 	tmp = head->content;
 	node = head->next;
 	head->content = node->content;
