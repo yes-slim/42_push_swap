@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/01 15:29:33 by yes-slim          #+#    #+#              #
-#    Updated: 2023/02/14 18:24:29 by yes-slim         ###   ########.fr        #
+#    Updated: 2023/02/14 18:26:26 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(NAME) : $(OBJ) push_swap.c
 	@ar -rc push_swap.a $(OBJ)
 	@cc push_swap.c push_swap.a -o $(NAME)
 	@clear
-	@echo "your program is ready to execute"
+	@echo "\033[0;32m your program is ready to execute \033[0m"
 
 clean :
 	@$(DEL) $(OBJ) push_swap.a 
