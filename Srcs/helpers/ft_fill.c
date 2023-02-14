@@ -6,12 +6,27 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 20:37:06 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/10 21:02:26 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/14 17:17:16 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
+void	check_arg(char *av)
+{
+	int	i;
+	int	a;
+
+	i = 0;
+	a = 0;
+	while (av[i])
+	{
+		if (av[i++] != ' ')
+			a++;
+	}
+	if (a == 0)
+		ft_error();
+}
 t_list	*ft_fill(char **av, int ac)
 {
 	int			i;
@@ -22,8 +37,9 @@ t_list	*ft_fill(char **av, int ac)
 	i = 1;
 	while (ac > i)
 	{
+		check_arg(av[i]);
 		arg = ft_join(arg, av[i++]);
-		arg =  ft_join(arg, " ");
+		arg = ft_join(arg, " ");
 	}
 	args = ft_split(arg, ' ');
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:16:27 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/12 12:27:27 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/14 18:16:56 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void	ft_error(void);
 void	check_args(char *av);
 void	check_double(t_list *head);
 t_list	*ft_fill(char **av, int ac);
+int		*sort_arr(t_list **stack_a);
 /*------------------------------------*/
 //INSTRUCTIONS
 void	pa(t_list **head_a, t_list **head_b);
