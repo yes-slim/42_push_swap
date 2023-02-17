@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   sort_V_hundred.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 16:32:52 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/17 14:55:31 by yes-slim         ###   ########.fr       */
+/*   Created: 2023/02/16 21:34:01 by yes-slim          #+#    #+#             */
+/*   Updated: 2023/02/16 21:38:18 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
-void	ft_error(void)
+void	sort_V_hundred(t_list **stack_a, t_list **stack_b, int *arr)
 {
-	ft_printf("Error\n");
-	exit(1);
-}
-
-void	check_if_sorted(t_list **stack_a)
-{
-	while (*stack_a)
-	{
-		if ((*stack_a)->content < (*stack_a)->next->content)
-			(*stack_a) = (*stack_a)->next;
-		else
-		{
-			ft_printf("Stack not sorted !!");
-			break ;
-		}
-	}
+	
 }

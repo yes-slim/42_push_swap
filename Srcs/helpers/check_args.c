@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:16:30 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/15 18:23:02 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/16 12:54:43 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	check_double(t_list *head)
 		{
 			if (tmp->content == tmp_2->content)
 				ft_error();
-				tmp_2 = tmp_2->next;
+			tmp_2 = tmp_2->next;
 		}
 		tmp = tmp->next;
 	}

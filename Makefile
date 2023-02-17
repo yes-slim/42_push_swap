@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/01 15:29:33 by yes-slim          #+#    #+#              #
-#    Updated: 2023/02/15 15:09:51 by yes-slim         ###   ########.fr        #
+#    Updated: 2023/02/16 16:20:11 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,6 @@ all : $(NAME)
 $(NAME) : $(OBJ) push_swap.c
 	@ar -rc push_swap.a $(OBJ)
 	@cc push_swap.c push_swap.a -o $(NAME)
-	@clear
 	@echo "✅\033[0;35m Your \033[0;33mpush_swap \033[0;35mprogram is created \033[0m"
 
 clean :

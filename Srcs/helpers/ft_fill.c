@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 20:37:06 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/14 17:17:16 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/16 16:29:16 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,4 @@ t_list	*ft_fill(char **av, int ac)
 	ft_free(args, i);
 	return (head);
 }
+
