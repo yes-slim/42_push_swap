@@ -6,16 +6,16 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 21:34:04 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/17 14:58:46 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 14:46:43 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sort_hundred(t_list **stack_a, t_list **stack_b, int *arr)
-{
+// void	sort_hundred_above(t_list **stack_a, t_list **stack_b, int *arr)
+// {
 	
-}
+// }
 
 void	to_stack_b(t_list **stack_a, t_list **stack_b, int *arr)
 {

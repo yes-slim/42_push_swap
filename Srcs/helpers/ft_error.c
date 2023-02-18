@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:32:52 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/17 14:55:31 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 13:09:10 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,17 @@ void	ft_error(void)
 	exit(1);
 }
 
-void	check_if_sorted(t_list **stack_a)
+void	check_if_sorted(t_list *stack_a)
 {
-	while (*stack_a)
+	while (stack_a->next)
 	{
-		if ((*stack_a)->content < (*stack_a)->next->content)
-			(*stack_a) = (*stack_a)->next;
-		else
+		if (stack_a->content < stack_a->next->content)
+			stack_a = stack_a->next;
+		else 
 		{
-			ft_printf("Stack not sorted !!");
-			break ;
+			ft_printf("Stack is not sorted\n");
+			exit(0);
 		}
 	}
+	ft_printf("Stack is sorted\n");
 }

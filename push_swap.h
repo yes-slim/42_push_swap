@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:16:27 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/17 14:56:37 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 12:47:54 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	ft_print_adr(unsigned long l, int *len);
 typedef struct s_list
 {
 	int				content;
+	int				index;
 	struct s_list	*next;
 }	t_list;
 
@@ -47,12 +48,19 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 /*------------------------------------*/
 //HELPERS
 void	ft_error(void);
-void	check_if_sorted(t_list **stack_a);
 void	check_args(char *av);
 void	check_double(t_list *head);
 t_list	*ft_fill(char **av, int ac);
 int		*sort_arr(t_list **stack_a);
 void	to_stack_b(t_list **stack_a, t_list **stack_b, int *arr);
+void	give_index(t_list *head, int *arr);
+void	check_if_sorted(t_list *stack_a);
+/*------------------------------------*/
+//SORTING
+void	sorting(int size, t_list **stack_a, t_list **stack_b, int *arr);
+void	sort_three(t_list **stack_a);
+void	sort_four(t_list **stack_a, t_list **stack_b, int *arr);
+void	sort_five_above(t_list **stack_a, t_list **stack_b, int *arr);
 /*------------------------------------*/
 //INSTRUCTIONS
 void	pa(t_list **head_a, t_list **head_b);

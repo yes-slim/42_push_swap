@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 20:37:06 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/16 16:29:16 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/17 20:38:13 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	check_arg(char *av)
 	if (a == 0)
 		ft_error();
 }
+
 t_list	*ft_fill(char **av, int ac)
 {
 	int			i;
@@ -52,6 +53,6 @@ t_list	*ft_fill(char **av, int ac)
 	while (args[i])
 		ft_lstadd_back(&head, ft_lstnew(ft_atoi(args[i++])));
 	ft_free(args, i);
+	check_double(head);
 	return (head);
 }
-
