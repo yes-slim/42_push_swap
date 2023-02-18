@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:32:52 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 13:09:10 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 16:57:57 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	check_if_sorted(t_list *stack_a)
 	{
 		if (stack_a->content < stack_a->next->content)
 			stack_a = stack_a->next;
-		else 
+		else
 		{
 			ft_printf("Stack is not sorted\n");
 			exit(0);

@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:34:19 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/15 15:55:38 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 16:58:29 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	push(t_list **head_1, t_list **head_2)
 void	pa(t_list **head_a, t_list **head_b)
 {
 	int	i;
-	
+
 	i = ft_lstsize(*head_b);
 	if (i == 0)
 		return ;
@@ -38,7 +38,7 @@ void	pa(t_list **head_a, t_list **head_b)
 void	pb(t_list **head_b, t_list **head_a)
 {
 	int	i;
-	
+
 	i = ft_lstsize(*head_a);
 	if (i == 0)
 		return ;

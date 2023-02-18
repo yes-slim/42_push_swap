@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:16:30 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/16 12:54:43 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 16:55:49 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,29 @@
 void	check_args(char *av)
 {
 	int			i;
+	int			j;
 	int			n;
 	static int	c;
 
 	i = 0;
+	j = 0;
 	if (!av[i])
 		ft_error();
-	if (av[i] == '+' || av[i] == '-')
-			av++;
-	while (av[i])
+	while (av[j])
 	{
-		if (ft_isdigit(av[i]) == 0)
-			ft_error();
-		i++;
+		if (av[j] == '+' || av[j] == '-')
+			if (av[j + 1] == ' ' || !av[j + 1])
+				ft_error();
+		j++;
 	}
+	while (av[i])
+		if (ft_isdigit(av[i++]) == 0)
+			ft_error();
 	n = ft_atoi(av);
 	if (n == 0 && c == 1)
 		ft_error();
 	if (n == 0)
-		c++;	
+		c++;
 }
 
 void	check_sort(t_list *head)
@@ -57,7 +61,7 @@ void	check_double(t_list *head)
 {
 	t_list	*tmp;
 	t_list	*tmp_2;
-	
+
 	tmp = head;
 	while (tmp)
 	{

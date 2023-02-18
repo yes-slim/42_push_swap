@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 21:34:04 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 15:42:55 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 17:00:25 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 // void	sort_hundred_above(t_list **stack_a, t_list **stack_b, int *arr)
 // {
-	
+
 // }
 
 void	to_stack_b(t_list **stack_a, t_list **stack_b)
 {
 	int	i;
 	int	n;
-	
+
 	n = 15;
 	if (ft_lstsize(*stack_a) > 100)
 		n *= 2;

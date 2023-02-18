@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 21:34:06 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 12:17:20 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 17:00:58 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	to_up(t_list **stack_a, char *str, int tar)
 	{
 		while ((*stack_a)->content != tar)
 			ra(stack_a);
-		return	;
+		return ;
 	}
 	if (ft_strlen(str) == 3)
 	{
@@ -51,28 +51,28 @@ void	sort_three(t_list **stack_a)
 	a = (*stack_a)->content;
 	b = (*stack_a)->next->content;
 	c = (*stack_a)->next->next->content;
-	if ((a > b) && (a > c) && (b < c)) //3 1 2
+	if ((a > b) && (a > c) && (b < c))
 		ra(stack_a);
-	if ((a < b) && (a > c) && (b > c)) //2 3 1
+	if ((a < b) && (a > c) && (b > c))
 		rra(stack_a);
-	if ((a < c) && (a < b) && (b > c)) //1 3 2 
+	if ((a < c) && (a < b) && (b > c))
 	{
 		rra(stack_a);
 		sa(*stack_a);
 	}
-	if ((a > b) && (a > c) && (b > c)) //3 2 1
+	if ((a > b) && (a > c) && (b > c))
 	{
 		ra(stack_a);
 		sa(*stack_a);
 	}	
-	if ((a > b) && (a < c) && (b < c)) //2 1 3
+	if ((a > b) && (a < c) && (b < c))
 		sa(*stack_a);
 }
 
 void	sort_four(t_list **stack_a, t_list **stack_b, int *arr)
 {
 	int	pos_m;
-	
+
 	pos_m = 0;
 	pos(*stack_a, arr[0], &pos_m);
 	if (pos_m > ft_lstsize(*stack_a) / 2)
@@ -88,7 +88,7 @@ void	sort_five_above(t_list **stack_a, t_list **stack_b, int *arr)
 {
 	int	pos_m;
 	int	i;
-	
+
 	pos_m = 0;
 	i = 0;
 	while (ft_lstsize(*stack_a) > 3)

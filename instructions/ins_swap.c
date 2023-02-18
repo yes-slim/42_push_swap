@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:27:12 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/12 14:06:44 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 16:59:00 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	swap(t_list *head)
 	tmp = head->content;
 	node = head->next;
 	head->content = node->content;
-	node->content = tmp;	
+	node->content = tmp;
 }
 
 void	sa(t_list *head_a)

@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:34:46 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/12 07:47:05 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 16:58:49 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	rotate(t_list **head)
 {
 	t_list	*tmp;
 	t_list	*node;
-	
+
 	node = *head;
 	*head = (*head)->next;
 	tmp = ft_lstlast(node);
