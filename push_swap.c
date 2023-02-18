@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:16:13 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 13:48:33 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 15:44:15 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	sorting(int size, t_list **stack_a, t_list **stack_b, int *arr)
 		sort_five_above(stack_a, stack_b, arr);
 	if (size > 25)
 	{
-		to_stack_b(stack_a, stack_b, arr);
+		to_stack_b(stack_a, stack_b);
 	}
 }
 
