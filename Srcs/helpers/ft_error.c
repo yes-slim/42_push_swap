@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:32:52 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 16:57:57 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 19:45:49 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,23 @@ void	check_if_sorted(t_list *stack_a)
 		}
 	}
 	ft_printf("Stack is sorted\n");
+}
+
+void	give_index(t_list *head, int *arr)
+{
+	int		i;
+	t_list	*tmp;
+	
+	tmp = head;
+	while (head)
+	{
+		i = 0;
+		while (i < ft_lstsize(tmp))
+		{
+			if (head->content == arr[i])
+				head->index = i;
+			i++;
+		}
+		head = head->next;
+	}
 }

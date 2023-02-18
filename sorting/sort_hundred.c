@@ -6,16 +6,29 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 21:34:04 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 17:00:25 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 21:54:32 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-// void	sort_hundred_above(t_list **stack_a, t_list **stack_b, int *arr)
-// {
+void	pos(t_list *stack_a, int min, int *pos_m);
 
-// }
+void	to_up_b(t_list **stack_b, char *str, int tar)
+{
+	if (ft_strlen(str) == 2)
+	{
+		while ((*stack_b)->content != tar)
+			rb(stack_b);
+		return ;
+	}
+	if (ft_strlen(str) == 3)
+	{
+		while ((*stack_b)->content != tar)
+			rrb(stack_b);
+		return ;
+	}
+}
 
 void	to_stack_b(t_list **stack_a, t_list **stack_b)
 {
@@ -41,5 +54,23 @@ void	to_stack_b(t_list **stack_a, t_list **stack_b)
 		}
 		else
 			ra(stack_a);
+	}
+}
+
+void	to_stack_a(t_list **stack_a, t_list **stack_b)
+{
+	int		i;
+	int		pos_M;
+
+	while (*stack_b)
+	{
+		i = ft_lstsize(*stack_b);
+		pos(*stack_b, i, &pos_M);
+		if (pos_M > ft_lstsize(*stack_b) / 2)
+			to_up_b(stack_b, "rrb", i);
+		else
+			to_up_b(stack_b, "rb", i);
+		pa(stack_a, stack_b);
+		i--;
 	}
 }

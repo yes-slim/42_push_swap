@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:16:13 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 17:35:31 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 21:51:21 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int ac, char **av)
 	// 	ft_printf("%d ", stack_b->content);
 	// 	stack_b = stack_b->next;
 	// }
-	// check_if_sorted(stack_b);
+	// check_if_sorted(stack_a);
 }
 
 void	sorting(int size, t_list **stack_a, t_list **stack_b, int *arr)
@@ -48,24 +48,7 @@ void	sorting(int size, t_list **stack_a, t_list **stack_b, int *arr)
 	if (size > 25)
 	{
 		to_stack_b(stack_a, stack_b);
+		to_stack_a(stack_a, stack_b);
 	}
 }
 
-void	give_index(t_list *head, int *arr)
-{
-	int		i;
-	t_list	*tmp;
-	
-	tmp = head;
-	while (head)
-	{
-		i = 0;
-		while (i < ft_lstsize(tmp))
-		{
-			if (head->content == arr[i])
-				head->index = i;
-			i++;
-		}
-		head = head->next;
-	}
-}

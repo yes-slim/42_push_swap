@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:16:27 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 17:01:55 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 21:23:16 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void	check_args(char *av);
 void	check_double(t_list *head);
 t_list	*ft_fill(char **av, int ac);
 int		*sort_arr(t_list **stack_a);
-void	to_stack_b(t_list **stack_a, t_list **stack_b);
 void	give_index(t_list *head, int *arr);
 void	check_if_sorted(t_list *stack_a);
 /*------------------------------------*/
@@ -61,6 +60,8 @@ void	sorting(int size, t_list **stack_a, t_list **stack_b, int *arr);
 void	sort_three(t_list **stack_a);
 void	sort_four(t_list **stack_a, t_list **stack_b, int *arr);
 void	sort_five_above(t_list **stack_a, t_list **stack_b, int *arr);
+void	to_stack_b(t_list **stack_a, t_list **stack_b);
+void	to_stack_a(t_list **stack_a, t_list **stack_b);
 /*------------------------------------*/
 //INSTRUCTIONS
 void	pa(t_list **head_a, t_list **head_b);
