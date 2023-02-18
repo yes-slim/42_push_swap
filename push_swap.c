@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:16:13 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 15:44:15 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/18 17:35:31 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int	main(int ac, char **av)
 
 void	sorting(int size, t_list **stack_a, t_list **stack_b, int *arr)
 {
+	if (size == 2)
+		sa(*stack_a);
 	if (size == 3)
 		sort_three(stack_a);
 	if (size == 4)
