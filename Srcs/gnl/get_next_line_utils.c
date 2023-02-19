@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 19:55:45 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 22:45:14 by yes-slim         ###   ########.fr       */
+/*   Created: 2022/11/12 20:10:00 by yes-slim          #+#    #+#             */
+/*   Updated: 2023/02/19 21:47:26 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../push_swap.h"
 
-int main(int ac, char **av)
+char	*ft_strchr(const char *str, int c)
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
-	char	*buff;
+	int	i;
 
-	if (ac <= 1)
-		exit(0);
-	stack_a = ft_fill(av, ac);
-	if (!stack_a)
-		ft_error();
-	buff = get_next_line(0);
-	while (!check_if_sorted(stack_a))
-	{
-		if (!check_ins(buff))
-			ft_error();
-		ft_execute(buff, &stack_a, &stack_b);
-	}
-	free (buff);
-	ft_printf("Ok\n");
+	if (!str)
+		return (NULL);
+	i = ft_strlen(str);
+	if ((char)c == '\0')
+		return ((char *)&str[i]);
+	i = 0;
+	while (str[i] != (char)c && str[i] != '\0')
+		i++;
+	if (str[i] == '\0')
+		return (NULL);
+	return ((char *)&str[i]);
 }

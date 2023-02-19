@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:14:57 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 20:52:54 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 22:55:10 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,21 @@ void	ft_print_char(char c, int *len);
 void	ft_print_str(char *str, int *len);
 void	ft_print_nbr(int i, int *len);
 void	ft_print_adr(unsigned long l, int *len);
+/*------------------------------------*/
+//GNL
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+char	*get_next_line(int fd);
+char	*fill(char *str);
+char	*ft_remainder(char *str);
+char	*ft_read(int fd, char *str);
+char	*ft_strchr(const char *str, int c);
+size_t	ft_strlen(const char *s);
+char	*ft_strdup(const char *src);
 /*------------------------------------*/
 //LIBFT
 typedef struct s_list
@@ -83,5 +98,16 @@ int		check_if_sorted(t_list *stack_a);
 int		str_cmp(char *str1, char *str2);
 int		check_ins(char *str);
 void	ft_execute(char *str, t_list **stack_a, t_list **stack_b);
+void	pa_bonus(t_list **head_a, t_list **head_b);
+void	pb_bonus(t_list **head_b, t_list **head_a);
+void	sa_bonus(t_list *head_a);
+void	sb_bonus(t_list *head_b);
+void	ss_bonus(t_list *head_a, t_list *head_b);
+void	ra_bonus(t_list **head_a);
+void	rb_bonus(t_list **head_b);
+void	rr_bonus(t_list **head_a, t_list **head_b);
+void	rra_bonus(t_list **head_a);
+void	rrb_bonus(t_list **head_b);
+void	rrr_bonus(t_list **head_a, t_list **head_b);
 /*------------------------------------*/
 #endif
