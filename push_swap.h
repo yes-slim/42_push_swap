@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 15:16:27 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 01:49:49 by yes-slim         ###   ########.fr       */
+/*   Created: 2023/02/19 16:14:57 by yes-slim          #+#    #+#             */
+/*   Updated: 2023/02/19 17:17:58 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
 # include <stdio.h>
@@ -20,6 +20,7 @@
 # include <limits.h>
 # include <unistd.h>
 # include <stdarg.h>
+
 int		ft_printf(const char *str, ...);
 void	ft_print_char(char c, int *len);
 void	ft_print_str(char *str, int *len);
@@ -48,6 +49,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 /*------------------------------------*/
 //HELPERS
 void	ft_error(void);
+void	ft_clear_stack(t_list **stack);
 void	check_args(char *av);
 void	check_double(t_list *head);
 t_list	*ft_fill(char **av, int ac);

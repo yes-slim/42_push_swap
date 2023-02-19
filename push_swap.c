@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:16:13 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 16:09:29 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 17:21:32 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	main(int ac, char **av)
 	t_list	*stack_a;
 	t_list	*stack_b;
 	int		*arr;
+	int		size;
 
 	if (ac <= 1)
 		exit(0);
@@ -24,8 +25,10 @@ int	main(int ac, char **av)
 	if (!stack_a)
 		ft_error();
 	arr = sort_arr(&stack_a);
+	if (!arr)
+		ft_clear_stack(&stack_a);
 	give_index(stack_a, arr);
-	int size = ft_lstsize(stack_a);
+	size = ft_lstsize(stack_a);
 	sorting(ft_lstsize(stack_a), &stack_a, &stack_b, arr);
 	// check_if_sorted(stack_a);
 }
@@ -46,4 +49,3 @@ void	sorting(int size, t_list **stack_a, t_list **stack_b, int *arr)
 		to_stack_a(stack_a, stack_b);
 	}
 }
-

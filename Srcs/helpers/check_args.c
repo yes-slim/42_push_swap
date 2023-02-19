@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:16:30 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 17:40:56 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 17:08:11 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	check_args(char *av)
 	if (n == 0 && c == 1)
 		ft_error();
 	if (n == 0)
-		c++;	
+		c++;
 }
 
 void	check_sort(t_list *head)

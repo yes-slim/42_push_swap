@@ -6,11 +6,26 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:32:52 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 19:45:49 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 17:20:54 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
+
+void	ft_clear_stack(t_list **stack)
+{
+	t_list	*tmp;
+    if (!stack || !(*stack))
+		return ;
+	while (stack)
+	{
+		tmp = (*stack)->next;
+		free(*stack);
+		*stack = tmp;
+	}
+	*stack = NULL;
+	ft_error();                                      
+}
 
 void	ft_error(void)
 {
@@ -37,7 +52,7 @@ void	give_index(t_list *head, int *arr)
 {
 	int		i;
 	t_list	*tmp;
-	
+
 	tmp = head;
 	while (head)
 	{

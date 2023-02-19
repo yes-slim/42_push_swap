@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 21:34:04 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 15:43:25 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 16:12:38 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,14 @@ void	to_up_b(t_list **stack_b, char *str, int tar)
 void	to_stack_a(t_list **stack_a, t_list **stack_b)
 {
 	int	i;
-	int	pos_M;
+	int	pos_max;
 
 	while (*stack_b)
 	{
-		pos_M = 0;
+		pos_max = 0;
 		i = ft_lstsize(*stack_b) - 1;
-		pos_b(*stack_b, i, &pos_M);
-		if (pos_M >= ft_lstsize(*stack_b) / 2)
+		pos_b(*stack_b, i, &pos_max);
+		if (pos_max >= ft_lstsize(*stack_b) / 2)
 			to_up_b(stack_b, "rrb", i);
 		else
 			to_up_b(stack_b, "rb", i);

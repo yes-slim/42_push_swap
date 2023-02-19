@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 17:58:57 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 16:57:35 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 17:19:15 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ int	*sort_arr(t_list **stack_a)
 	head = *stack_a;
 	n = ft_lstsize(head);
 	arr = malloc(n * sizeof(int));
+	if (!arr)
+		return (NULL);
 	i = 0;
 	while (head)
 	{
