@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 21:34:06 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/18 17:00:58 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 01:46:04 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	pos(t_list *stack_a, int min, int *pos_m)
 {
-	t_list	*tmp;
-
-	tmp = stack_a;
 	while (stack_a)
 	{
 		if (min == stack_a->content)
