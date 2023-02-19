@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:28:57 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 23:01:35 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 23:04:52 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int	str_cmp(char *str1, char *str2)
 	}
 	return (1);
 }
-
 
 int	check_ins(char *str)
 {
