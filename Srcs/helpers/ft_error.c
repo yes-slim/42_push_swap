@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:32:52 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 18:31:25 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 20:50:23 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,26 +27,16 @@ void	ft_clear_stack(t_list **stack)
 	*stack = NULL;
 	ft_error();
 }
+void	clear_all(t_list **stack1, t_list **stack2)
+{
+	ft_clear_stack(stack1);
+	ft_clear_stack(stack2);
+}
 
 void	ft_error(void)
 {
 	ft_printf("Error\n");
 	exit(1);
-}
-
-void	check_if_sorted(t_list *stack_a)
-{
-	while (stack_a->next)
-	{
-		if (stack_a->content < stack_a->next->content)
-			stack_a = stack_a->next;
-		else
-		{
-			ft_printf("Stack is not sorted\n");
-			exit(0);
-		}
-	}
-	ft_printf("Stack is sorted\n");
 }
 
 void	give_index(t_list *head, int *arr)

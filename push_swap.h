@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:14:57 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 17:17:58 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 20:52:54 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 //HELPERS
 void	ft_error(void);
 void	ft_clear_stack(t_list **stack);
+void	clear_all(t_list **stack1, t_list **stack2);
 void	check_args(char *av);
 void	check_double(t_list *head);
 t_list	*ft_fill(char **av, int ac);
 int		*sort_arr(t_list **stack_a);
 void	give_index(t_list *head, int *arr);
-void	check_if_sorted(t_list *stack_a);
 /*------------------------------------*/
 //SORTING
 void	sorting(int size, t_list **stack_a, t_list **stack_b, int *arr);
@@ -77,5 +77,11 @@ void	rr(t_list **head_a, t_list **head_b);
 void	rra(t_list **head_a);
 void	rrb(t_list **head_b);
 void	rrr(t_list **head_a, t_list **head_b);
+/*------------------------------------*/
+//BONUS
+int		check_if_sorted(t_list *stack_a);
+int		str_cmp(char *str1, char *str2);
+int		check_ins(char *str);
+void	ft_execute(char *str, t_list **stack_a, t_list **stack_b);
 /*------------------------------------*/
 #endif
