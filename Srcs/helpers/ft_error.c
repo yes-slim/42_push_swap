@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:32:52 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 17:20:54 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 18:31:25 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void	ft_clear_stack(t_list **stack)
 {
 	t_list	*tmp;
-    if (!stack || !(*stack))
+
+	if (!stack || !(*stack))
 		return ;
 	while (stack)
 	{
@@ -24,7 +25,7 @@ void	ft_clear_stack(t_list **stack)
 		*stack = tmp;
 	}
 	*stack = NULL;
-	ft_error();                                      
+	ft_error();
 }
 
 void	ft_error(void)

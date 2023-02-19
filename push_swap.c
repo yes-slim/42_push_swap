@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:16:13 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 17:21:32 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/19 18:32:01 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int ac, char **av)
 	give_index(stack_a, arr);
 	size = ft_lstsize(stack_a);
 	sorting(ft_lstsize(stack_a), &stack_a, &stack_b, arr);
-	// check_if_sorted(stack_a);
+	check_if_sorted(stack_a);
 }
 
 void	sorting(int size, t_list **stack_a, t_list **stack_b, int *arr)
