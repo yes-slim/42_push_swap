@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:34:19 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 22:59:56 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/20 16:03:14 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,24 +24,14 @@ void	push_b(t_list **head_1, t_list **head_2)
 
 void	pa_bonus(t_list **head_a, t_list **head_b)
 {
-	int	i;
-
-	i = ft_lstsize(*head_b);
-	if (i == 0)
-		return ;
 	if (!head_b || !(*head_b))
-		ft_clear_stack(head_b);
+		return ;
 	push_b(head_a, head_b);
 }
 
 void	pb_bonus(t_list **head_b, t_list **head_a)
 {
-	int	i;
-
-	i = ft_lstsize(*head_a);
-	if (i == 0)
-		return ;
 	if (!head_a || !(*head_a))
-		ft_clear_stack(head_a);
+		return ;
 	push_b(head_b, head_a);
 }

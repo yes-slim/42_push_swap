@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:14:57 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 22:55:10 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/20 16:06:31 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <limits.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <fcntl.h>
 
 int		ft_printf(const char *str, ...);
 void	ft_print_char(char c, int *len);
@@ -28,7 +29,6 @@ void	ft_print_nbr(int i, int *len);
 void	ft_print_adr(unsigned long l, int *len);
 /*------------------------------------*/
 //GNL
-# include <fcntl.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
