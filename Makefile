@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/01 15:29:33 by yes-slim          #+#    #+#              #
-#    Updated: 2023/02/20 14:24:51 by yes-slim         ###   ########.fr        #
+#    Updated: 2023/02/20 18:20:36 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,14 +24,13 @@ GNL = get_next_line get_next_line_utils
 
 SRCS =	$(addsuffix .c, $(addprefix Srcs/ft_printf/, $(FT_PRINTF))) \
 		$(addsuffix .c, $(addprefix Srcs/libft/, $(LIBFT))) \
-		$(addsuffix .c, $(addprefix Srcs/gnl/, $(GNL))) \
 		$(addsuffix .c, $(addprefix Srcs/helpers/, $(HELPERS))) \
 		$(addsuffix .c, $(addprefix instructions/, $(INSTRUC))) \
-		$(addsuffix .c, $(addprefix sorting/, $(SORT))) \
-		$(addsuffix .c, $(addprefix bonus/, $(BNS))) \
-
+		$(addsuffix .c, $(addprefix sorting/, $(SORT)))		
+BSRCS = $(addsuffix .c, $(addprefix Srcs/gnl/, $(GNL))) \
+		$(addsuffix .c, $(addprefix bonus/, $(BNS)))
 OBJ = $(SRCS:.c=.o)
-
+BOBJ = $(BSRCS:.c=.o)
 
 all : $(NAME)
 
@@ -41,19 +40,20 @@ $(NAME) : $(OBJ) push_swap.c
 	@clear
 	@echo "✅\033[0;35m Your \033[0;33mpush_swap \033[0;35mprogram is created \033[0m"
 
-bonus : $(OBJ) checker.c
-	@ar -rc push_swap.a $(OBJ)	
-	@cc checker.c push_swap.a -o checker
+bonus : $(OBJ) $(BOBJ)
+	@ar -rc push_swap_bonus.a $(OBJ) $(BOBJ)
+	@cc checker.c push_swap_bonus.a -o checker
 	@clear
 	@echo "✅\033[0;35m Checker program is created\033[0m"
 
 clean :
-	@$(DEL) $(OBJ) push_swap.a 
+	@$(DEL) $(OBJ) push_swap.a push_swap_bonus.a
 	@echo "✅ \033[0;32mCleaning done\033[0m"
 
 fclean : clean
-	@$(DEL) $(OBJ) $(NAME) checker
+	@$(DEL) $(OBJ) $(BOBJ) $(NAME) checker
 
 re : fclean all
+
 
 .PHONY : all clean fclean re bonus
