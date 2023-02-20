@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:28:57 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 23:41:55 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:21:58 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,28 +51,26 @@ int	check_ins(char *str)
 
 void	ft_execute(char *str, t_list **stack_a, t_list **stack_b)
 {
-	if (!stack_a || !(*stack_a) || !stack_b || !(*stack_b))
-		clear_all(stack_a, stack_b);
-	else if (str_cmp(str, "ra\n"))
+	if (str_cmp(str, "ra\n"))
 		ra_bonus(stack_a);
-	else if (str_cmp(str, "rb\n"))
+	if (str_cmp(str, "rb\n"))
 		rb_bonus(stack_b);
-	else if (str_cmp(str, "rr\n"))
+	if (str_cmp(str, "rr\n"))
 		rr_bonus(stack_a, stack_b);
-	else if (str_cmp(str, "rra\n"))
+	if (str_cmp(str, "rra\n"))
 		rra_bonus(stack_a);
-	else if (str_cmp(str, "rrb\n"))
+	if (str_cmp(str, "rrb\n"))
 		rrb_bonus(stack_a);
-	else if (str_cmp(str, "rrr\n"))
+	if (str_cmp(str, "rrr\n"))
 		rrr_bonus(stack_a, stack_b);
-	else if (str_cmp(str, "sa\n"))
+	if (str_cmp(str, "sa\n"))
 		sa_bonus(*stack_a);
-	else if (str_cmp(str, "sb\n"))
+	if (str_cmp(str, "sb\n"))
 		sb_bonus(*stack_b);
-	else if (str_cmp(str, "ss\n"))
+	if (str_cmp(str, "ss\n"))
 		ss_bonus(*stack_a, *stack_b);
-	else if (str_cmp(str, "pa\n"))
+	if (str_cmp(str, "pa\n"))
 		pa_bonus(stack_a, stack_b);
-	else if (str_cmp(str, "pb\n"))
+	if (str_cmp(str, "pb\n"))
 		pb_bonus(stack_b, stack_a);
 }
