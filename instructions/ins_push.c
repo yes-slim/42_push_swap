@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:34:19 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/20 16:11:33 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/20 20:09:28 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	push(t_list **head_1, t_list **head_2)
 void	pa(t_list **head_a, t_list **head_b)
 {
 	if (!head_b || !(*head_b))
-		clear_all(head_a, head_b);	
+		clear_all(head_a, head_b);
 	push(head_a, head_b);
 	ft_printf("pa\n");
 }
