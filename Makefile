@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/01 15:29:33 by yes-slim          #+#    #+#              #
-#    Updated: 2023/02/20 18:35:25 by yes-slim         ###   ########.fr        #
+#    Updated: 2023/02/20 20:11:06 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,5 @@ fclean : clean
 	@$(DEL) $(OBJ) $(BOBJ) $(NAME) checker
 
 re : fclean all
-
 
 .PHONY : all clean fclean re bonus
