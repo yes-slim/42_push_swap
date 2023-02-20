@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:16:13 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/20 20:08:23 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/20 20:44:35 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	main(int ac, char **av)
 	stack_a = ft_fill(av, ac);
 	if (!stack_a)
 		ft_error();
+	check_sort(stack_a);
 	arr = sort_arr(&stack_a);
 	if (!arr)
 		ft_clear_stack(&stack_a);

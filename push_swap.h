@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:14:57 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/20 16:06:31 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/20 20:44:57 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void	ft_clear_stack(t_list **stack);
 void	clear_all(t_list **stack1, t_list **stack2);
 void	check_args(char *av);
 void	check_double(t_list *head);
+void	check_sort(t_list *head);
 t_list	*ft_fill(char **av, int ac);
 int		*sort_arr(t_list **stack_a);
 void	give_index(t_list *head, int *arr);

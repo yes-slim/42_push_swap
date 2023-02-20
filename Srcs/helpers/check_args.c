@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:16:30 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 18:31:43 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/20 20:44:21 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,4 @@ void	check_double(t_list *head)
 		}
 		tmp = tmp->next;
 	}
-	check_sort(head);
 }
