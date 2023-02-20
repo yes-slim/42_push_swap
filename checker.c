@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 19:55:45 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/20 16:08:57 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/02/20 19:34:16 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int ac, char **av)
 	}
 	free (buff);
 	if (!stack_b && check_if_sorted(stack_a))
-		ft_printf("Ok\n");
+		ft_printf("OK\n");
 	else
-		ft_printf("Ko\n");
+		ft_printf("KO\n");
 }
