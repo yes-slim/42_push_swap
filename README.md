@@ -1,4 +1,6 @@
-42_push_swap
+# 42_push_swap
 ---
 
-<a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cl9smgnrq00250fju0ztclesb/project/2928272" alt="yes-slim's 42 push_swap Score" /></a>
+  This project will make you sort data on a stack, with a limited set of instructions, using the lowest possible number of actions. To succeed you’ll have to manipulate various types of algorithms and choose the most appropriate solution (out of many) for an optimized data sorting.
+
+---
