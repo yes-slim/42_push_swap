@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 19:50:19 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/01 16:09:25 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/01 09:54:11 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,7 @@ int	ft_printf(const char *str, ...)
 	while (str[i])
 	{
 		if (str[i] == '%')
-		{
-			i++;
-			check_format(str[i], args, &len);
-		}
+			check_format(str[++i], args, &len);
 		else
 			len += write(1, &str[i], 1);
 		i++;

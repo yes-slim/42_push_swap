@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:54:50 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/10 20:08:21 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/01 09:58:09 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ int	ft_wrdcount(char const *s, char c)
 void	ft_free(char **arr, int i)
 {
 	while (i >= 0)
-	{
-		free(arr[i]);
-		i--;
-	}
+		free(arr[i--]);
 	free(arr);
 }
 
@@ -55,11 +52,7 @@ char	*fillwrd(const char *s, char c, int start)
 	if (!tab)
 		return (NULL);
 	while (i < len)
-	{
-		tab[i] = s[start];
-		i++;
-		start++;
-	}
+		tab[i++] = s[start++];
 	tab[i] = '\0';
 	return (tab);
 }

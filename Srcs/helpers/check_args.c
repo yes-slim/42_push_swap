@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:16:30 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/20 20:44:21 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/01 09:55:50 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	check_args(char *av)
 		ft_error();
 	if (av[i] == '+' || av[i] == '-')
 		av++;
-	if (av[i] == ' ' || !av[i])
+	if (!av[i])
 		ft_error();
 	while (av[i])
 		if (ft_isdigit(av[i++]) == 0)

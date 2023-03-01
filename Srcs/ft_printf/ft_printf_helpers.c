@@ -6,21 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:50:49 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/10 21:12:18 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/01 09:53:42 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
-
-void	ft_print_adr(unsigned long l, int *len)
-{
-	char	*hex;
-
-	hex = "0123456789abcdef";
-	if (l >= 16)
-		ft_print_adr((l / 16), len);
-	ft_print_char(hex[l % 16], len);
-}
 
 void	ft_print_char(char c, int *len)
 {
@@ -61,4 +51,14 @@ void	ft_print_nbr(int i, int *len)
 	}
 	if (i >= 0 && i <= 9)
 		ft_print_char((i + '0'), len);
+}
+
+void	ft_print_adr(unsigned long l, int *len)
+{
+	char	*hex;
+
+	hex = "0123456789abcdef";
+	if (l >= 16)
+		ft_print_adr((l / 16), len);
+	ft_print_char(hex[l % 16], len);
 }

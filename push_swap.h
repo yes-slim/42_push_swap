@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:14:57 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/20 20:44:57 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/01 09:57:25 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void	ft_free(char **arr, int i);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstnew(int content);
 t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 /*------------------------------------*/
 //HELPERS

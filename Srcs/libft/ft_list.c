@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_list.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:12:23 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/10 21:07:42 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/01 09:57:14 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_list	*ft_lstnew(int content)
 {
-	t_list	*tmp;
+	t_list	*new;
 
-	if (new)
-	{
-		if (*lst)
-		{
-			tmp = ft_lstlast(*lst);
-			tmp->next = new;
-		}
-		else
-			*lst = new;
-	}
-}
-
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	t_list	*head;
-
-	if (!new || !lst)
-		return ;
-	head = *lst;
-	new->next = head;
-	*lst = new;
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
 
 t_list	*ft_lstlast(t_list *lst)
@@ -53,18 +38,6 @@ t_list	*ft_lstlast(t_list *lst)
 	return (tmp);
 }
 
-t_list	*ft_lstnew(int content)
-{
-	t_list	*new;
-
-	new = malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
-}
-
 int	ft_lstsize(t_list *lst)
 {
 	t_list	*tmp;
@@ -78,4 +51,20 @@ int	ft_lstsize(t_list *lst)
 		i++;
 	}
 	return (i);
+}
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*tmp;
+
+	if (new)
+	{
+		if (*lst)
+		{
+			tmp = ft_lstlast(*lst);
+			tmp->next = new;
+		}
+		else
+			*lst = new;
+	}
 }

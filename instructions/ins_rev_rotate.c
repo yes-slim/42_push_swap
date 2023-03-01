@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:34:37 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 20:51:25 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/01 09:52:05 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ void	rev_rotate(t_list **head)
 	node = *head;
 	tmp = *head;
 	while (tmp->next != ft_lstlast(*head))
-	{
 		tmp = tmp->next;
-	}
 	*head = ft_lstlast(*head);
 	tmp->next = NULL;
 	(*head)->next = node;
