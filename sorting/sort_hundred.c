@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 21:34:04 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 16:12:38 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:54:17 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	to_stack_b(t_list **stack_a, t_list **stack_b)
 {

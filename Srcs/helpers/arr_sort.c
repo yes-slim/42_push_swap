@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 17:58:57 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 17:19:15 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:54:38 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "push_swap.h"
 
 int	*arr_sort(int *arr, int size)
 {

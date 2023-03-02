@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:34:19 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/20 16:03:14 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:53:40 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	push_b(t_list **head_1, t_list **head_2)
 {

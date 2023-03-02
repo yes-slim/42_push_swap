@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 19:50:19 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/03/01 09:54:11 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:54:28 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "push_swap.h"
 
 static void	check_format(const char c, va_list ap, int *len)
 {

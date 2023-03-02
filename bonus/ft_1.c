@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:28:57 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/20 20:39:22 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:53:34 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	check_if_sorted(t_list *stack_a)
 {

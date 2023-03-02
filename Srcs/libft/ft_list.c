@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:12:23 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/03/01 09:57:14 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:55:14 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "push_swap.h"
 
 t_list	*ft_lstnew(int content)
 {

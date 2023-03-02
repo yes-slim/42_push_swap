@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:10:00 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 21:47:26 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:54:32 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "push_swap.h"
 
 char	*ft_strchr(const char *str, int c)
 {

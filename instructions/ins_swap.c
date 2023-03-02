@@ -6,25 +6,23 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:27:12 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 20:52:06 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:54:10 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	swap(t_list *head)
 {
 	int		i;
-	t_list	*node;
 	int		tmp;
 
 	i = ft_lstsize(head);
 	if (i <= 1)
 		return ;
 	tmp = head->content;
-	node = head->next;
-	head->content = node->content;
-	node->content = tmp;
+	head->content = head->next->content;
+	head->next->content = tmp;
 }
 
 void	sa(t_list *head_a)

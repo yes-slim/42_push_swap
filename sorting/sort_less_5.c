@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 21:34:06 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 01:46:04 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:54:20 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	pos(t_list *stack_a, int min, int *pos_m)
 {

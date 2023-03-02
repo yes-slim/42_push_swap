@@ -6,11 +6,11 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/01 15:29:33 by yes-slim          #+#    #+#              #
-#    Updated: 2023/02/20 20:45:43 by yes-slim         ###   ########.fr        #
+#    Updated: 2023/03/02 18:56:57 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CFLAGS = -Wall -Werror -Wextra -c
+CFLAGS = -Wall -Werror -Wextra -I includes
 NAME = push_swap
 NAME_B = checker
 DEL = rm -f
@@ -39,7 +39,7 @@ bonus : $(NAME_B)
 
 $(NAME) : $(OBJ) push_swap.c
 	@ar -rc push_swap.a $(OBJ)
-	@cc push_swap.c push_swap.a -o $(NAME)
+	@cc push_swap.c -I includes push_swap.a -o $(NAME)
 	@clear
 	@echo "✅\033[0;35m Your \033[0;33mpush_swap \033[0;35mprogram is created \033[0m"
 

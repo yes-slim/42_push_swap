@@ -6,11 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:34:46 by yes-slim          #+#    #+#             */
-/*   Updated: 2023/02/19 20:51:40 by yes-slim         ###   ########.fr       */
+/*   Updated: 2023/03/02 18:54:06 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	rotate(t_list **head)
 {
