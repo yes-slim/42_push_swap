@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/01 15:29:33 by yes-slim          #+#    #+#              #
-#    Updated: 2023/03/02 18:56:57 by yes-slim         ###   ########.fr        #
+#    Updated: 2023/03/02 18:58:53 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,8 +30,12 @@ SRCS =	$(addsuffix .c, $(addprefix Srcs/ft_printf/, $(FT_PRINTF))) \
 		$(addsuffix .c, $(addprefix sorting/, $(SORT)))		
 BSRCS = $(addsuffix .c, $(addprefix Srcs/gnl/, $(GNL))) \
 		$(addsuffix .c, $(addprefix bonus/, $(BNS)))
+
 OBJ = $(SRCS:.c=.o)
 BOBJ = $(BSRCS:.c=.o)
+
+%.o : %.c
+	cc $(CFLAGS) -c $< -o $@
 
 all : $(NAME)
 
