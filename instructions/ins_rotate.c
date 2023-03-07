@@ -20,8 +20,8 @@ void	rotate(t_list **head)
 	node = *head;
 	*head = (*head)->next;
 	tmp = ft_lstlast(node);
-	node->next = NULL;
 	tmp->next = node;
+	node->next = NULL;
 }
 
 void	ra(t_list **head_a)
